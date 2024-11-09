@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asian Series</title>
+    <link rel="icon" href="new.jfif">
+    <!--linking css file-->
+    <link rel="stylesheet" href="style.css">
+    <!--custom css file-->
+    <link rel="stylesheet" href="styles.css">
+
+
+    
+</head>
+<body>
+    <!--header in body-->
+    <header>
+            <div class="container-fluid" >
+              <a class="navbar-brand" href="project.html">
+                <img src="new.jfif" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+               <strong> Asian Series </strong>
+              </a>
+              <img src="we.jfif" alt="">
+            </div>
+        <!--nav bar decoration-->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="about.html"><b>Asian Series</b></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item" style="padding-left: 300px;">
+                    <a class="nav-link active" aria-current="page" href="project.html"  target="_blank"><b>Home</b></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="series.html"  target="_blank"><b>Series</b></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="action.html"  target="_blank"><b>Action</b></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="movies.html"  target="_blank"><b>Movies</b></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="family.html" target="_blank"><b>Family</b></a>
+                  </li>
+                  <form class="d-flex" role="search" >
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                  </form>
+                  <li>
+                    <a href="fav.html"><img src="fav.png" alt="" height="60px" width="35px" ></a>
+                  </li>
+                </ul>
+              </div>
+              <br>
+            </div>
+          </nav>
+    </header>
+
+    
+
+    <!--carousel implementation-->
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <a href="my.html" ><img src="my.jfif" class="d-block w-100"  height="500px" alt="..."></a>
+          </div>
+          <div class="carousel-item">
+            <a href="vin.html" ><img src="vincenzo.jfif" class="d-block w-100"  height="500px" alt="..."></a>
+          </div>
+          <div class="carousel-item">
+            <a href="nine.html" ><img src="nine.jfif" class="d-block w-100" height="500px" alt="..."></a>
+          </div>
+          <div class="carousel-item">
+            <a href="wh.html"><img src="wh.jpg" class="d-block w-100" height="500px" alt="..."></a>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+ 
+    <!--custom js file -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+      function searchContent() {
+          const query = document.getElementById('search-input').value.toLowerCase();
+          const items = document.querySelectorAll('.item');
+          items.forEach(item => {
+              const title = item.getAttribute('My Demon').toLowerCase();
+              if (title.includes(query)) {
+                  item.style.display = 'my.html';
+              } else {
+                  item.style.display = 'none';
+              }
+          });
+      }
+  </script>
+  
+  </body>
+</html>
